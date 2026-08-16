@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens do projeto.
+ * Modo RM Partiu (padrão): laranja #FF6B00 como primária + dourado #D4A843.
+ * Modo OnerTravel ([data-mode="oner"]): azul profissional #0066CC.
+ * A troca de modo acontece via atributo data-mode no <html>, com transição suave.
+ */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%; /* #1A1A1A */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 25 100% 50%; /* #FF6B00 — RM Partiu */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 96%; /* #F5F5F5 — surface */
+    --muted-foreground: 0 0% 40%; /* #666666 */
+
+    --accent: 42 61% 55%; /* #D4A843 — dourado */
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84% 60%; /* #EF4444 */
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%; /* #22C55E */
+
+    --border: 0 0% 90%; /* #E5E5E5 */
+    --input: 0 0% 90%;
+    --ring: 25 100% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  [data-mode="oner"] {
+    --primary: 210 100% 40%; /* #0066CC — OnerTravel */
+    --accent: 199 89% 48%; /* azul claro de apoio */
+    --ring: 210 100% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Compensa a navbar fixa ao navegar por âncoras */
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Transição suave de cor ao alternar RM ↔ OnerTravel (300ms) */
+  body,
+  a,
+  button {
+    transition-property: background-color, border-color;
+    transition-duration: 300ms;
+  }
+
+  ::selection {
+    @apply bg-primary/20;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
