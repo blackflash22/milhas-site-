@@ -6,10 +6,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-/** Número do WhatsApp da agência (mesmo do site de referência). */
-export const WHATSAPP_NUMBER = "5511987569836";
+/** Link direto do WhatsApp da Extraordinário Trip. */
+export const WHATSAPP_LINK = "https://wa.me/message/ZO3SNZ6UOEJAA1";
 
-/** Monta o link wa.me com mensagem pré-preenchida. */
-export function buildWhatsAppLink(message: string): string {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+/** Retorna o link direto do WhatsApp da agência. */
+export function buildWhatsAppLink(_message: string): string {
+  return WHATSAPP_LINK;
 }

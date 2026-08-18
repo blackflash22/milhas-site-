@@ -13,8 +13,8 @@ interface InstagramButtonProps {
  * Adaptado para Tailwind CSS (sem styled-components).
  */
 export function InstagramButton({
-  href = "https://www.instagram.com/rmpartiuviagens",
-  label = "Instagram da Extraordinário Trip",
+  href = "https://www.instagram.com/extraordinariotrip?igsh=dmtyZTJmaDBnanAx&utm_source=qr",
+  label = "Instagram oficial da Extraordinário Trip",
   className,
 }: InstagramButtonProps) {
   return (

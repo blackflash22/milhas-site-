@@ -55,13 +55,25 @@ export function MobileMenu() {
             Pedir cotação
           </WhatsAppButton>
           <a
-            href="https://www.instagram.com/rmpartiuviagens"
+            href="https://www.instagram.com/extraordinariotrip?igsh=dmtyZTJmaDBnanAx&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 rounded-md text-sm font-medium hover:underline"
           >
-              <InstagramButton label="Instagram da Extraordinário Trip" />
-            Instagram
+            <InstagramButton label="Instagram oficial da Extraordinário Trip" />
+            Instagram oficial
+          </a>
+          <a
+            href="https://www.instagram.com/oviajanteextraordinario?igsh=MXJnbzNvZWJvMHJubQ%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 rounded-md text-sm font-medium hover:underline"
+          >
+            <InstagramButton
+              href="https://www.instagram.com/oviajanteextraordinario?igsh=MXJnbzNvZWJvMHJubQ%3D%3D&utm_source=qr"
+              label="Instagram do proprietário Extraordinário Trip"
+            />
+            Instagram proprietário
           </a>
         </div>
       </SheetContent>
