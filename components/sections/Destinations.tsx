@@ -1,13 +1,12 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
 import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { buildWhatsAppLink } from "@/lib/utils";
 import { destinations } from "@/lib/data";
 
 /**
- * Grid de destinos com imagens. Cada card abre o WhatsApp
+ * Grid de destinos com efeito flip card. Cada card abre o WhatsApp
  * com mensagem específica do destino (padrão do site de referência).
  */
 export function Destinations() {
@@ -27,29 +26,40 @@ export function Destinations() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Pedir cotação para ${destination.name} pelo WhatsApp`}
-                className="group block h-full"
+                className="group block h-[254px] flip-card"
               >
-                <Card className="h-full overflow-hidden transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lift">
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={destination.image}
-                      alt={`Foto de ${destination.name}`}
-                      fill
-                      loading="lazy"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <Badge className="absolute left-3 top-3" variant="secondary">
-                      {destination.category}
-                    </Badge>
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-t-[1rem]">
+                      <Image
+                        src={destination.image}
+                        alt={`Foto de ${destination.name}`}
+                        fill
+                        loading="lazy"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                      <Badge className="absolute left-3 top-3" variant="secondary">
+                        {destination.category}
+                      </Badge>
+                    </div>
+                    <div className="p-5 flex flex-col justify-center h-[calc(100%-160px)]">
+                      <p className="flip-card-title">{destination.name}</p>
+                    </div>
                   </div>
-                  <div className="p-5">
-                    <h3 className="text-lg font-semibold">{destination.name}</h3>
-                    <p className="mt-1.5 text-sm text-muted-foreground">
+                  <div className="flip-card-back p-5 flex flex-col justify-center items-center">
+                    <p className="flip-card-title">{destination.name}</p>
+                    <p className="mt-2 text-sm text-center">
                       {destination.description}
                     </p>
+                    <p className="mt-2 text-xs opacity-80">
+                      {destination.country}
+                    </p>
+                    <span className="mt-4 text-xs font-medium opacity-90">
+                      Clique para solicitar cotação
+                    </span>
                   </div>
-                </Card>
+                </div>
               </a>
             </Reveal>
           ))}
