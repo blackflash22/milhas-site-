@@ -57,10 +57,10 @@ const config: Config = {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        // Tokens fixos da marca (não mudam com o modo)
-        gold: "#D4A843",
-        rm: "#FF6B00",
-        oner: "#0066CC",
+        // Tokens fixos da marca Extraordinário Trip
+        trip: "#1a6fb3",
+        "trip-light": "#4a9fd8",
+        "trip-dark": "#135a91",
         success: "#22C55E",
         danger: "#EF4444",
       },

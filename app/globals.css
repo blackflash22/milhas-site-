@@ -4,49 +4,47 @@
 
 /*
  * Design tokens do projeto.
- * Modo RM Partiu (padrão): laranja #FF6B00 como primária + dourado #D4A843.
- * Modo OnerTravel ([data-mode="oner"]): azul profissional #0066CC.
- * A troca de modo acontece via atributo data-mode no <html>, com transição suave.
+ * Paleta Extraordinário Trip: tons de azul inspirados no logo.
  */
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%; /* #1A1A1A */
+    --foreground: 210 50% 15%; /* #132237 */
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 210 50% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 210 50% 15%;
 
-    --primary: 25 100% 50%; /* #FF6B00 — RM Partiu */
+    --primary: 206 75% 40%; /* #1a6fb3 — azul do logo */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 206 40% 96%;
+    --secondary-foreground: 210 50% 15%;
 
-    --muted: 0 0% 96%; /* #F5F5F5 — surface */
-    --muted-foreground: 0 0% 40%; /* #666666 */
+    --muted: 206 30% 96%; /* #f0f7fc — surface azulado */
+    --muted-foreground: 210 20% 45%;
 
-    --accent: 42 61% 55%; /* #D4A843 — dourado */
-    --accent-foreground: 0 0% 10%;
+    --accent: 200 60% 55%; /* #4a9fd8 — azul claro */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%; /* #EF4444 */
     --destructive-foreground: 0 0% 100%;
 
     --success: 142 71% 45%; /* #22C55E */
 
-    --border: 0 0% 90%; /* #E5E5E5 */
-    --input: 0 0% 90%;
-    --ring: 25 100% 50%;
+    --border: 206 30% 88%;
+    --input: 206 30% 88%;
+    --ring: 206 75% 40%;
 
     --radius: 0.75rem;
   }
 
   [data-mode="oner"] {
-    --primary: 210 100% 40%; /* #0066CC — OnerTravel */
-    --accent: 199 89% 48%; /* azul claro de apoio */
-    --ring: 210 100% 40%;
+    --primary: 206 75% 40%;
+    --accent: 200 60% 55%;
+    --ring: 206 75% 40%;
   }
 }
 

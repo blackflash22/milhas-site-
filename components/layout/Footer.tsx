@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Plane, Mail } from "lucide-react";
+import Image from "next/image";
+import { Mail } from "lucide-react";
 import { InstagramButton } from "@/components/shared/InstagramButton";
 import { Separator } from "@/components/ui/separator";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
@@ -17,7 +18,7 @@ const agencyLinks = [
   { label: "Cotação", href: "/#cotacao" },
 ];
 
-/** Footer compartilhado pelos modos RM Partiu e OnerTravel. */
+/** Footer compartilhado pela Extraordinário Trip. */
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -26,14 +27,19 @@ export function Footer() {
       <div className="container grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
           <Link href="/" className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <Plane className="h-5 w-5" aria-hidden />
+            <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg">
+              <Image
+                src="/logo.jpg"
+                alt="Extraordinário Trip"
+                fill
+                className="object-cover"
+              />
             </span>
-            <span className="font-bold">RM Partiu Viagens</span>
+            <span className="font-bold">Extraordinário Trip</span>
           </Link>
           <p className="text-sm text-muted-foreground">
-            Cotações para viagens nacionais e internacionais com atendimento
-            pelo WhatsApp.
+            Excelência em cada destino. Cotações para viagens nacionais e
+            internacionais com atendimento pelo WhatsApp.
           </p>
         </div>
 
@@ -92,7 +98,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              <InstagramButton label="Instagram da RM Partiu Viagens" />
+              <InstagramButton label="Instagram da Extraordinário Trip" />
               @rmpartiuviagens
             </a>
           </div>
@@ -102,12 +108,10 @@ export function Footer() {
       <Separator />
 
       <div className="container flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground sm:flex-row">
-        <p>© {year} RM Partiu Viagens. Todos os direitos reservados.</p>
+        <p>© {year} Extraordinário Trip. Todos os direitos reservados.</p>
         <p>
           Plataforma de busca e reserva:{" "}
-          <Link href="/onertravel" className="font-medium text-primary hover:underline">
-            OnerTravel
-          </Link>
+          <span className="font-medium text-primary">OnerTravel</span>
         </p>
       </div>
     </footer>

@@ -9,7 +9,7 @@ export function Services() {
       <div className="container">
         <SectionHeading
           title="Tudo que precisa conversar entre si na viagem."
-          description="Voo, hotel, passeios e extras precisam fazer sentido juntos. A RM Partiu Viagens ajuda a evitar escolhas soltas."
+          description="Voo, hotel, passeios e extras precisam fazer sentido juntos. A Extraordinário Trip ajuda a evitar escolhas soltas."
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

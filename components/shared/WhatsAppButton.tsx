@@ -23,7 +23,7 @@ export function WhatsAppButton({
         href={buildWhatsAppLink(message)}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Conversar com a RM Partiu Viagens pelo WhatsApp"
+        aria-label="Conversar com a Extraordinário Trip pelo WhatsApp"
       >
         {showIcon && <MessageCircle aria-hidden />}
         {children}

@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Plane } from "lucide-react";
+import Image from "next/image";
 import { InstagramButton } from "@/components/shared/InstagramButton";
 import { Button } from "@/components/ui/button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { navLinks } from "@/components/layout/nav-links";
 
 /**
- * Navbar fixa com logo RM Partiu, links âncora,
+ * Navbar fixa com logo Extraordinário Trip, links âncora,
  * Instagram, CTA de cotação e menu hamburger no mobile.
  */
 export function Navbar() {
@@ -16,17 +16,23 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-2.5"
-          aria-label="RM Partiu Viagens — página inicial"
+          aria-label="Extraordinário Trip — página inicial"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <Plane className="h-5 w-5" aria-hidden />
+          <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg">
+            <Image
+              src="/logo.jpg"
+              alt="Extraordinário Trip"
+              fill
+              className="object-cover"
+              priority
+            />
           </span>
           <span className="leading-tight">
             <span className="block text-sm font-bold sm:text-base">
-              RM Partiu Viagens
+              Extraordinário Trip
             </span>
             <span className="hidden text-xs text-muted-foreground sm:block">
-              agência de viagens
+              Excelência em cada destino
             </span>
           </span>
         </Link>

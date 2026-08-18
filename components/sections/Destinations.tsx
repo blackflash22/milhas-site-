@@ -16,7 +16,7 @@ export function Destinations() {
       <div className="container">
         <SectionHeading
           title="Destinos para quem quer viajar com tudo mais claro."
-          description="Escolha uma inspiração ou peça outro roteiro. A RM Partiu Viagens ajuda a montar opções compatíveis com datas, perfil dos viajantes e orçamento."
+          description="Escolha uma inspiração ou peça outro roteiro. A Extraordinário Trip ajuda a montar opções compatíveis com datas, perfil dos viajantes e orçamento."
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -7,8 +7,8 @@ import { buildWhatsAppLink } from "@/lib/utils";
 
 /**
  * Banner sutil de coexistência entre os dois modos:
- * - No modo RM Partiu: sugere a busca online da OnerTravel.
- * - No modo OnerTravel: sugere o atendimento personalizado da RM Partiu.
+ * - No modo principal: sugere a busca online da OnerTravel.
+ * - No modo OnerTravel: sugere o atendimento personalizado da Extraordinário Trip.
  */
 export function CrossBanner() {
   const { isOner } = useMode();
@@ -29,7 +29,7 @@ export function CrossBanner() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 font-medium text-primary hover:underline"
           >
-            Fale com a RM Partiu
+            Fale com a Extraordinário Trip
             <ArrowRight className="h-3.5 w-3.5" aria-hidden />
           </a>
         </div>
@@ -41,12 +41,12 @@ export function CrossBanner() {
     <div className="border-b bg-muted/60">
       <div className="container flex flex-wrap items-center justify-center gap-x-3 gap-y-1 py-2.5 text-center text-sm">
         <span className="inline-flex items-center gap-1.5 text-muted-foreground">
-          <Search className="h-4 w-4 text-oner" aria-hidden />
+          <Search className="h-4 w-4 text-trip" aria-hidden />
           Prefere buscar e reservar online?
         </span>
         <Link
           href="/onertravel"
-          className="inline-flex items-center gap-1 font-medium text-oner hover:underline"
+          className="inline-flex items-center gap-1 font-medium text-trip hover:underline"
         >
           Compare preços na OnerTravel
           <ArrowRight className="h-3.5 w-3.5" aria-hidden />

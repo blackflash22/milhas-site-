@@ -19,7 +19,7 @@ export function QuoteForm() {
             Busque, compare e reserve online
           </h2>
           <p className="mt-4 text-muted-foreground">
-            A OnerTravel é a plataforma de reservas da RM Partiu Viagens: voos,
+            A OnerTravel é a plataforma de reservas da Extraordinário Trip: voos,
             hotéis e pacotes com preços atualizados em tempo real.
           </p>
         </Reveal>

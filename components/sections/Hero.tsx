@@ -31,7 +31,7 @@ export function Hero() {
           <Reveal delay={0.2}>
             <p className="mt-5 max-w-xl text-lg text-muted-foreground">
               Conte para onde quer ir, quando pretende viajar e quem vai com
-              você. A RM Partiu Viagens compara caminhos e monta uma cotação
+              você. A Extraordinário Trip compara caminhos e monta uma cotação
               com voos, hospedagem, passeios e serviços que fazem sentido para
               o seu plano.
             </p>

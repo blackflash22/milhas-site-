@@ -19,7 +19,7 @@ const ModeContext = createContext<ModeContextValue>({ mode: "rm", isOner: false 
 
 /**
  * O modo é derivado da rota: tudo sob /onertravel usa o tema OnerTravel,
- * o restante usa o tema RM Partiu. O atributo data-mode no <html>
+ * o restante usa o tema Extraordinário Trip. O atributo data-mode no <html>
  * troca as variáveis CSS (ver globals.css) com transição suave.
  */
 export function ModeProvider({ children }: { children: ReactNode }) {

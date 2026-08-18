@@ -16,7 +16,7 @@ import type {
 } from "@/types";
 
 /* ------------------------------------------------------------------ */
-/* Conteúdo da homepage — fiel ao site de referência RM Partiu Viagens */
+/* Conteúdo da homepage — Extraordinário Trip                         */
 /* ------------------------------------------------------------------ */
 
 export const heroBadges = [
@@ -185,7 +185,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "Vocês montam viagens nacionais e internacionais?",
     answer:
-      "Sim. A RM Partiu Viagens atende destinos no Brasil e no exterior, incluindo passagens, hospedagem, pacotes, ingressos e extras.",
+      "Sim. A Extraordinário Trip atende destinos no Brasil e no exterior, incluindo passagens, hospedagem, pacotes, ingressos e extras.",
   },
   {
     question: "Posso pedir só passagem ou só hotel?",

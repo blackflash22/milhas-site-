@@ -14,16 +14,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://extraordinariotrip.com.br"),
   title: {
-    default: "RM Partiu Viagens | Cotação de Viagens Nacionais e Internacionais",
-    template: "%s | RM Partiu Viagens",
+    default: "Extraordinário Trip | Cotação de Viagens Nacionais e Internacionais",
+    template: "%s | Extraordinário Trip",
   },
   description:
-    "Sua viagem organizada sem decidir tudo sozinho. Cotações sem compromisso para Brasil e exterior com atendimento humano pelo WhatsApp — ou busque e reserve online pela OnerTravel.",
+    "Excelência em cada destino. Cotações sem compromisso para Brasil e exterior com atendimento humano pelo WhatsApp — ou busque e reserve online pela OnerTravel.",
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    siteName: "RM Partiu Viagens",
-    title: "RM Partiu Viagens | Cotação de Viagens Nacionais e Internacionais",
+    siteName: "Extraordinário Trip",
+    title: "Extraordinário Trip | Cotação de Viagens Nacionais e Internacionais",
     description:
       "Cotações sem compromisso, atendimento humano e busca online pela OnerTravel. Brasil e exterior.",
     images: [

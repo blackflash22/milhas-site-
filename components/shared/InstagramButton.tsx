@@ -14,7 +14,7 @@ interface InstagramButtonProps {
  */
 export function InstagramButton({
   href = "https://www.instagram.com/rmpartiuviagens",
-  label = "Instagram da RM Partiu Viagens",
+  label = "Instagram da Extraordinário Trip",
   className,
 }: InstagramButtonProps) {
   return (

@@ -1,9 +1,9 @@
-# RM Partiu Viagens + OnerTravel
+# Extraordinário Trip + OnerTravel
 
-Website completo da agência **RM Partiu Viagens** com a plataforma de busca e reserva online **OnerTravel** coexistindo no mesmo projeto.
+Website completo da agência **Extraordinário Trip** com a plataforma de busca e reserva online **OnerTravel** coexistindo no mesmo projeto.
 
-- **Modo Consultivo (RM Partiu)** — tema laranja `#FF6B00`: cotação humana via WhatsApp, sem compromisso.
-- **Modo Autônomo (OnerTravel)** — tema azul `#0066CC`: busca de voos, hotéis e pacotes com comparação de preços e reserva online.
+- **Modo Consultivo (Extraordinário Trip)** — tema azul `#1a6fb3`: cotação humana via WhatsApp, sem compromisso.
+- **Modo Autônomo (OnerTravel)** — tema azul `#1a6fb3`: busca de voos, hotéis e pacotes com comparação de preços e reserva online.
 
 ## Stack
 
@@ -31,21 +31,20 @@ npm run start
 
 ## Rotas
 
-| Rota                    | Descrição                                    |
-| ----------------------- | -------------------------------------------- |
-| `/`                     | Homepage RM Partiu (modo consultivo)         |
-| `/onertravel`           | Dashboard da plataforma OnerTravel           |
-| `/onertravel/voos`      | Resultados de voos (filtros, ordenação)      |
-| `/onertravel/hoteis`    | Resultados de hotéis                         |
-| `/onertravel/pacotes`   | Pacotes voo + hotel                          |
+| Rota                    | Descrição                                          |
+| ----------------------- | -------------------------------------------------- |
+| `/`                     | Homepage Extraordinário Trip (modo consultivo)     |
+| `/onertravel`           | Dashboard da plataforma OnerTravel                 |
+| `/onertravel/voos`      | Resultados de voos (filtros, ordenação)            |
+| `/onertravel/hoteis`    | Resultados de hotéis                               |
+| `/onertravel/pacotes`   | Pacotes voo + hotel                                |
 
 As páginas de resultados aceitam query string: `?origem=GRU&destino=CUN&ida=2026-10-10&volta=2026-10-17&pax=2&classe=Econômica`.
 
 ## Como funciona a coexistência dos modos
 
 - O tema é controlado pelo atributo `data-mode` no `<html>` (`components/providers/ModeProvider.tsx`), que troca as variáveis CSS em `app/globals.css` com transição de 300ms.
-- O toggle **RM Partiu ↔ OnerTravel** fica no header e navega entre `/` e `/onertravel`.
-- Banner cruzado (`components/onertravel/CrossBanner.tsx`): no modo RM sugere a busca online; no modo OnerTravel sugere o atendimento humano.
+- Banner cruzado (`components/onertravel/CrossBanner.tsx`): no modo principal sugere a busca online; no modo OnerTravel sugere o atendimento humano.
 - Footer e contatos são compartilhados nos dois modos.
 - A "reserva" da OnerTravel é finalizada com confirmação da equipe via WhatsApp, conectando os dois mundos.
 

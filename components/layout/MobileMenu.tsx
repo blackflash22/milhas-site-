@@ -29,7 +29,7 @@ export function MobileMenu() {
       </SheetTrigger>
       <SheetContent side="right" className="flex flex-col">
         <SheetHeader>
-          <SheetTitle className="text-left">RM Partiu Viagens</SheetTitle>
+          <SheetTitle className="text-left">Extraordinário Trip</SheetTitle>
         </SheetHeader>
 
         <nav aria-label="Menu mobile" className="mt-4 flex flex-col gap-1">
@@ -60,7 +60,7 @@ export function MobileMenu() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 rounded-md text-sm font-medium hover:underline"
           >
-            <InstagramButton label="Instagram da RM Partiu Viagens" />
+              <InstagramButton label="Instagram da Extraordinário Trip" />
             Instagram
           </a>
         </div>

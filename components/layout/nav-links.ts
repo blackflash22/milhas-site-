@@ -1,4 +1,4 @@
-/** Âncoras da homepage RM Partiu (mesma ordem do site de referência). */
+/** Âncoras da homepage Extraordinário Trip. */
 export const navLinks = [
   { label: "Mais pedidos", href: "/#mais-pedidos" },
   { label: "Destinos", href: "/#destinos" },
