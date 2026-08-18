@@ -52,13 +52,8 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <InstagramButton className="hidden sm:inline-flex" />
-          <InstagramButton
-            href="https://www.instagram.com/oviajanteextraordinario?igsh=MXJnbzNvZWJvMHJubQ%3D%3D&utm_source=qr"
-            label="Instagram do proprietário Extraordinário Trip"
-            className="hidden sm:inline-flex"
-          />
+        <div className="flex items-center gap-3">
+          <InstagramButton size="sm" className="hidden sm:inline-flex" />
           <Button asChild className="hidden sm:inline-flex">
             <Link href="/#cotacao">Pedir cotação</Link>
           </Button>

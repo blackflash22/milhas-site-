@@ -6,6 +6,7 @@ interface InstagramButtonProps {
   href?: string;
   label?: string;
   className?: string;
+  size?: "sm" | "md";
 }
 
 /**
@@ -16,7 +17,10 @@ export function InstagramButton({
   href = "https://www.instagram.com/extraordinariotrip?igsh=dmtyZTJmaDBnanAx&utm_source=qr",
   label = "Instagram oficial da Extraordinário Trip",
   className,
+  size = "sm",
 }: InstagramButtonProps) {
+  const sizeClasses = size === "sm" ? "h-9 w-9" : "h-[45px] w-[45px]";
+
   return (
     <a
       href={href}
@@ -24,7 +28,8 @@ export function InstagramButton({
       rel="noopener noreferrer"
       aria-label={label}
       className={cn(
-        "group relative flex h-[45px] w-[45px] items-center justify-center rounded-[7px]",
+        "group relative flex items-center justify-center rounded-[7px]",
+        sizeClasses,
         className
       )}
     >

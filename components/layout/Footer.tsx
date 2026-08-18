@@ -98,20 +98,8 @@ export function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              <InstagramButton label="Instagram oficial da Extraordinário Trip" />
+              <InstagramButton size="sm" label="Instagram oficial da Extraordinário Trip" />
               @extraordinariotrip
-            </a>
-            <a
-              href="https://www.instagram.com/oviajanteextraordinario?igsh=MXJnbzNvZWJvMHJubQ%3D%3D&utm_source=qr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <InstagramButton
-                href="https://www.instagram.com/oviajanteextraordinario?igsh=MXJnbzNvZWJvMHJubQ%3D%3D&utm_source=qr"
-                label="Instagram do proprietário Extraordinário Trip"
-              />
-              @oviajanteextraordinario
             </a>
           </div>
         </div>
