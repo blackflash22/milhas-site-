@@ -49,18 +49,19 @@ function DestinationCard({ destination }: { destination: typeof destinations[0] 
       onMouseLeave={() => setFlipped(false)}
     >
       <div
-        className="relative w-full h-full transition-transform duration-800"
+        className="relative w-full h-full"
         style={{
           transformStyle: 'preserve-3d',
           transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+          transition: 'transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1)',
         }}
       >
         <div
-          className="absolute inset-0 rounded-[1rem] border border-coral shadow-[0_8px_14px_0_rgba(0,0,0,0.2)]"
+          className="absolute inset-0 rounded-[1rem] border border-blue-200 shadow-[0_8px_14px_0_rgba(0,0,0,0.15)] transition-shadow duration-500 hover:shadow-lg"
           style={{
             backfaceVisibility: 'hidden',
-            background: 'linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%, rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%)',
-            color: 'coral',
+            background: 'linear-gradient(120deg, #f0f9ff 60%, #e0f2fe 88%, #bae6fd 40%, rgba(56, 189, 248, 0.2) 48%)',
+            color: '#0284c7',
           }}
         >
           <div className="relative aspect-[16/10] overflow-hidden rounded-t-[1rem]">
@@ -72,31 +73,31 @@ function DestinationCard({ destination }: { destination: typeof destinations[0] 
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover"
             />
-            <Badge className="absolute left-3 top-3" variant="secondary">
+            <Badge className="absolute left-3 top-3 bg-blue-100 text-blue-800 hover:bg-blue-200 border-none" variant="secondary">
               {destination.category}
             </Badge>
           </div>
           <div className="p-5 flex flex-col justify-center h-[calc(100%-160px)]">
-            <p className="flip-card-title">{destination.name}</p>
+            <p className="flip-card-title font-semibold text-lg">{destination.name}</p>
           </div>
         </div>
         <div
-          className="absolute inset-0 rounded-[1rem] border border-coral shadow-[0_8px_14px_0_rgba(0,0,0,0.2)] p-5 flex flex-col justify-center items-center"
+          className="absolute inset-0 rounded-[1rem] shadow-[0_8px_14px_0_rgba(0,0,0,0.2)] p-5 flex flex-col justify-center items-center"
           style={{
             backfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
-            background: 'linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%, bisque 40%, rgb(255, 185, 160) 78%)',
+            background: 'linear-gradient(120deg, #38bdf8 30%, #0369a1 88%, #7dd3fc 40%, #0284c7 78%)',
             color: 'white',
           }}
         >
-          <p className="flip-card-title">{destination.name}</p>
-          <p className="mt-2 text-sm text-center">
+          <p className="flip-card-title font-bold text-xl">{destination.name}</p>
+          <p className="mt-3 text-sm text-center leading-relaxed">
             {destination.description}
           </p>
-          <p className="mt-2 text-xs opacity-80">
+          <p className="mt-3 text-xs opacity-80 font-medium">
             {destination.country}
           </p>
-          <span className="mt-4 text-xs font-medium opacity-90">
+          <span className="mt-6 text-xs font-semibold opacity-90 border-b border-white/40 pb-0.5">
             Clique para solicitar cotação
           </span>
         </div>
