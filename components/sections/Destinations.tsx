@@ -43,7 +43,7 @@ function DestinationCard({ destination }: { destination: typeof destinations[0] 
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Pedir cotação para ${destination.name} pelo WhatsApp`}
-      className="group block h-[254px]"
+      className="group block h-[320px] sm:h-[340px]"
       style={{ perspective: '1000px' }}
       onMouseEnter={() => setFlipped(true)}
       onMouseLeave={() => setFlipped(false)}
@@ -57,14 +57,14 @@ function DestinationCard({ destination }: { destination: typeof destinations[0] 
         }}
       >
         <div
-          className="absolute inset-0 rounded-[1rem] border border-blue-200 shadow-[0_8px_14px_0_rgba(0,0,0,0.15)] transition-shadow duration-500 hover:shadow-lg"
+          className="absolute inset-0 rounded-[1rem] border border-blue-200 shadow-[0_8px_14px_0_rgba(0,0,0,0.15)] transition-shadow duration-500 hover:shadow-lg flex flex-col"
           style={{
             backfaceVisibility: 'hidden',
             background: 'linear-gradient(120deg, #f0f9ff 60%, #e0f2fe 88%, #bae6fd 40%, rgba(56, 189, 248, 0.2) 48%)',
             color: '#0284c7',
           }}
         >
-          <div className="relative aspect-[16/10] overflow-hidden rounded-t-[1rem]">
+          <div className="relative h-[200px] sm:h-[220px] w-full shrink-0 overflow-hidden rounded-t-[1rem]">
             <Image
               src={destination.image}
               alt={`Foto de ${destination.name}`}
@@ -77,8 +77,8 @@ function DestinationCard({ destination }: { destination: typeof destinations[0] 
               {destination.category}
             </Badge>
           </div>
-          <div className="p-5 flex flex-col justify-center h-[calc(100%-160px)]">
-            <p className="flip-card-title font-semibold text-lg">{destination.name}</p>
+          <div className="flex flex-1 flex-col items-center justify-center p-4 text-center">
+            <p className="flip-card-title font-semibold text-lg sm:text-xl">{destination.name}</p>
           </div>
         </div>
         <div
